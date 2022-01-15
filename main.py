@@ -11,6 +11,7 @@ async def main():
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         author="Maxim Yurevich",
         url="https://www.dropbox.com/",
+        hashtags="#Lorem #Ipsum"
     )
 
 if __name__ == "__main__":
