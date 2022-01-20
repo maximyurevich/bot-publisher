@@ -25,8 +25,7 @@ if API_TOKEN and CHANNEL is not None:
         title: Optional[str],
         description: Optional[str] = None,
         url: Optional[str],
-        author: Optional[str],
-	hashtags: Optional[str]
+	    hashtags: Optional[str]
         ):
         """Write message to channel
 
@@ -39,17 +38,16 @@ if API_TOKEN and CHANNEL is not None:
             "title": title,
             "description": description,
             "image_url": image_url,
-            "author": author,
             "url": url,
-	    "hashtags": hashtags
+	        "hashtags": hashtags
         }
 
         message = Template(dedent("""
         <b>$title</b>
         $description
-        <b><a href=\"$url\">Подробнее</a></b>
+        👉 <b><a href=\"$url\">Подробнее</a></b>
         
-        <i>$author</i>$hashtags"""))
+        $hashtags"""))
 
         await bot.send_photo(
             channel_id,

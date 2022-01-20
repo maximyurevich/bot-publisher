@@ -9,7 +9,6 @@ async def main():
         image_url="https://www.dropbox.com/s/2k6k4ugh3f3qmca/590px-Test_ttp_big.jpg?dl=0",
         title="Lorep ipsum",
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        author="Maxim Yurevich",
         url="https://www.dropbox.com/",
         hashtags="#Lorem #Ipsum"
     )
