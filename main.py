@@ -7,7 +7,7 @@ async def main():
     """Main function"""
     await write_message_to_channel(
         image_url="https://www.dropbox.com/s/2k6k4ugh3f3qmca/590px-Test_ttp_big.jpg?dl=0",
-        title="Lorep ipsum",
+        title="Lorem ipsum",
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         url="https://www.dropbox.com/",
         hashtags="#Lorem #Ipsum"

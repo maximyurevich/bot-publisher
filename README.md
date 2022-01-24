@@ -1,3 +1,3 @@
 # Telegram publisher bot
-
-![Screenshot](Screenshot-2022-01-11-090414.png)
+Telegram broadcaster bot based on aiogram
+![Screenshot](Screenshot-2022-02-10-110555.jpg)
