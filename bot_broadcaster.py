@@ -1,5 +1,6 @@
 """Bot broadcaster"""
 import logging
+import os
 import sys
 from typing import Optional
 from string import Template
@@ -11,11 +12,12 @@ from dotenv.main import dotenv_values
 logging.basicConfig(level=logging.INFO)
 
 
-config = dotenv_values(".env.development")
+config = dotenv_values(os.environ["ENVPATH"])
 
 
 API_TOKEN = config["API_TOKEN"]
 CHANNEL = config["CHANNEL"]
+
 
 try:
     if API_TOKEN is None or CHANNEL is None:
@@ -23,6 +25,7 @@ try:
 except ValueError as e:
     logging.error(e)
     sys.exit(1)
+
 
 bot = Bot(token=API_TOKEN, parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot)
