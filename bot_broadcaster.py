@@ -56,7 +56,9 @@ async def write_message_to_channel(
 
     message = Template(dedent("""
     <b>$title</b>
+
     $description
+
     👉 <b><a href=\"$url\">Подробнее</a></b>
     
     $hashtags"""))
