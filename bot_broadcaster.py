@@ -54,14 +54,22 @@ async def write_message_to_channel(
         "hashtags": hashtags
     }
 
-    message = Template(dedent("""
-    <b>$title</b>
+    if description != "":
+        message = Template(dedent("""
+        <b>$title</b>
 
-    $description
+        $description
 
-    👉 <b><a href=\"$url\">Подробнее</a></b>
-    
-    $hashtags"""))
+        👉 <b><a href=\"$url\">Подробнее</a></b>
+        
+        $hashtags"""))
+    else:
+        message = Template(dedent("""
+        <b>$title</b>
+
+        👉 <b><a href=\"$url\">Подробнее</a></b>
+        
+        $hashtags"""))
 
     await bot.send_photo(
         CHANNEL,
@@ -74,7 +82,7 @@ async def main():
     await write_message_to_channel(
         image_url="https://www.dropbox.com/s/2k6k4ugh3f3qmca/590px-Test_ttp_big.jpg?dl=0",
         title="Lorem ipsum",
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        description="",
         url="https://www.dropbox.com/",
         hashtags="#Lorem #Ipsum"
     )
